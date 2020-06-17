@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        
+        body {
+            font-family: 'Source Sans Pro';
+            background: white;
+            margin: 0;
+            color: black;
+        }
+        
+        .container {
+            height: 10em;
+            text-align: center;
+        }
+        
+        .containerbut {
+            margin: 10px;
+        }
+        
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 3px;
+            border-radius: 10px;
+        }
+        
+        input[type=number1],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            width: 25%;
+            height: 25%;
+        }
+        
+        input[type=number2],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            width: 25%;
+            height: 25%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Tutorial ipan</title>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tutorial Ipan</h1>
+
+        <form id="form">
+            <p> <input type="number1" placeholder="angka 1"></p>
+            <p> <input type="number2" placeholder="angka 2"></p>
+            <br>
+        </form>
+        <div class="containerbut">
+            <button class="button" onclick="fungsiKu1()"> Kali * </button>
+            <button class="button" onclick="fungsiKu2()"> Bagi / </button>
+            <button class="button" onclick="fungsiKu3()"> tambah + </button>
+            <button class="button" onclick="fungsiKu4()"> Kurang - </button>
+            <button class="button" onclick="fungsiKu5()"> modulus </button>
+            <button class="button" onclick="fungsiKu6()"> Pangkat ^ </button>
+            <h1>
+                <p id="tes">
+                    Hasil
+                </p>
+            </h1>
+        </div>
+    </div>
+    <script>
+        function fungsiKu1() {
+            let input1 = document.getElementById("form").elements[0].value;
+            let input2 = document.getElementById("form").elements[1].value;
+            var hasil;
+            hasil = input1 * input2;
+            alert("Hasilnya : " + hasil);
+            document.getElementById("tes").innerHTML = hasil;
+        }
+
+        function fungsiKu2() {
+            let input1 = document.getElementById("form").elements[0].value;
+            let input2 = document.getElementById("form").elements[1].value;
+            var hasil;
+            hasil = input1 / input2;
+            alert("Hasilnya : " + hasil);
+            document.getElementById("tes").innerHTML = hasil;
+        }
+
+        function fungsiKu3() {
+            let input1 = document.getElementById("form").elements[0].value;
+            let input2 = document.getElementById("form").elements[1].value;
+            var hasil;
+            hasil = parseInt(input1) + parseInt(input2);
+            alert("Hasilnya : " + hasil);
+            document.getElementById("tes").innerHTML = hasil;
+        }
+
+        function fungsiKu4() {
+            let input1 = document.getElementById("form").elements[0].value;
+            let input2 = document.getElementById("form").elements[1].value;
+            var hasil;
+            hasil = input1 - input2;
+            alert("Hasilnya : " + hasil);
+            document.getElementById("tes").innerHTML = hasil;
+        }
+
+        function fungsiKu5() {
+            let input1 = document.getElementById("form").elements[0].value;
+            let input2 = document.getElementById("form").elements[1].value;
+            var hasil;
+            hasil = input1 % input2;
+            document.getElementById("tes").innerHTML = hasil;
+        }
+
+        function fungsiKu6() {
+            let input1 = document.getElementById("form").elements[0].value;
+            let input2 = document.getElementById("form").elements[1].value;
+            var hasil, i;
+            hasil = input1;
+            for (i = 1; i < input2; i++) {
+                hasil = hasil * input1;
+            }
+            alert("Hasilnya : " + hasil);
+            document.getElementById("tes").innerHTML = hasil;
+        }
+    </script>
+
+
+</body>
+
+</html>
